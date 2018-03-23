@@ -183,10 +183,10 @@ while True:
     
     take_bet(player_chips)  #asking the player to bet
         
-    #print("while playing", playing)
+    #testing: print("while playing", playing)
     while playing: # We need this to run hit_or_stand. This means player's playing. 
         # Switch to the dealer when player choses to stand. This sets playing to False and breaks out of the loop.
-        #print("call hit or stand")
+        #testing:print("call hit or stand")
         hit_or_stand(mydeck, player)  #Asking the player to Hit or Stand.
         
         show_some(player,dealer)# Show cards. Dealer does not yet hit, so she has two cards. One card is hidden.)
@@ -195,7 +195,7 @@ while True:
             player_busts(dealer, player, player_chips)
             break
             
-    #print("while done")
+    #testing: print("while done")
     
     show_all(player,dealer) #showing all cards once the player has decided to stand.
 
@@ -208,7 +208,7 @@ while True:
             
     if player.value<21: #If the player hasn't busted, the dealer hits until she reaches 17.
                         
-        while dealer.value<17:  #Indentation is different to ensure that my while loop for dealer will execute. 
+        while dealer.value<17:  #Increased indentation because the while loop should execute only when the player has less than 21. 
             hit(mydeck, dealer)
             show_all(player,dealer)
             #To print individual cards: extra_card = mydeck.distribute(), print(extra_card), dealer.add_card(extra_card), dealer.adjust_for_ace()
